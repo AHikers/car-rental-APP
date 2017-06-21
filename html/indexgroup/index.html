@@ -81,25 +81,21 @@
         }
         #btns_box .act_btn{
             color: #F4B800;
-            /*height: 82px;*/
-            width: 48%;
+            height: 82px;
+            width: 18.4%;
             display: inline-block;
             float: left;
             text-indent: -1000em;
             margin-bottom: 10px;
         }
-        #btns_box .event_2{
-            float: right;
-            margin-bottom: 10px;
+        #btns_box .event_l{
+            float: left;
         }
-        #btns_box .event_3{
+        #btns_box .event_m{
+            float: left;
+            margin-left: 2%;
         }
-        #btns_box .event_4{
-            float: right;
-        }
-        #btns_box .event_1{
-            
-        }
+        
         /*4个按钮end*/
         /*活动详情按钮*/
         #act_detail_box{
@@ -127,13 +123,11 @@
             text-align: center;
             line-height: 21px;
         }
-        #act_detail_box .ing{
-            background-color: #0084FF;
+        #act_detail_box .hot{
+            background-color: #ff4646;
             
         }
-        #act_detail_box .end{
-            background-color: #617488;
-        }
+
         /*活动详情按钮end*/
     </style>
 </head>
@@ -170,19 +164,25 @@
             </div>
             <!-- 敬请期待等 -->
             <div id="btns_box">
-                <img src="../../res/drawable-xhdpi/event_menu_1.png" onclick="openActGroup(0);" alt="免费抢票" class="act_btn event_1">
-                <img src="../../res/drawable-xhdpi/event_menu_2.png" onclick="openActGroup(1);" alt="电影观察" class="act_btn event_2">
-                <img src="../../res/drawable-xhdpi/event_menu_3.png" onclick="openActGroup(2);" alt="团购专场" class="act_btn event_3">
-                <img src="../../res/drawable-xhdpi/event_menu_4.png" alt="敬请期待" class="act_btn event_4">
+                <img src="../../res/drawable-xhdpi/Maserati.jpg" onclick="openActGroup(0);" alt="玛莎拉蒂" class="act_btn event_l">
+                <img src="../../res/drawable-xhdpi/ferrari.jpg" onclick="openActGroup(1);" alt="法拉利" class="act_btn event_m">
+                <img src="../../res/drawable-xhdpi/Maserati.jpg" onclick="openActGroup(2);" alt="玛莎拉蒂" class="act_btn event_m">
+                <img src="../../res/drawable-xhdpi/porsche.jpg" onclick="openActGroup(3);" alt="保时捷" class="act_btn event_m">
+                <img src="../../res/drawable-xhdpi/porsche.jpg" onclick="openActGroup(4);" alt="保时捷" class="act_btn event_m">
+                <img src="../../res/drawable-xhdpi/Maserati.jpg" onclick="openActGroup(5);" alt="玛莎拉蒂" class="act_btn event_l">
+                <img src="../../res/drawable-xhdpi/porsche.jpg" onclick="openActGroup(6);" alt="保时捷" class="act_btn event_m">
+                <img src="../../res/drawable-xhdpi/ferrari.jpg" onclick="openActGroup(7);" alt="法拉利" class="act_btn event_m">
+                <img src="../../res/drawable-xhdpi/Maserati.jpg" onclick="openActGroup(8);" alt="玛莎拉蒂" class="act_btn event_m">
+                <img src="../../res/drawable-xhdpi/ferrari.jpg" onclick="openActGroup(9);" alt="法拉利" class="act_btn event_m">
             </div>
             <!-- 活动详情按钮 -->
             <div id="act_detail_box">
                 <div class="act_detail_btn">
-                    <span class="statu ing">进行中</span>
+                    <span class="statu hot">热门</span>
                     <img src="../../res/drawable-xhdpi/act_1.png" alt="111">
                 </div>
                 <div class="act_detail_btn">
-                    <span class="statu end">已结束</span>
+                    <span class="statu hot">热门</span>
                     <img src="../../res/drawable-xhdpi/act_2.png" alt="111">
                 </div>
             </div>

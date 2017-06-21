@@ -23,9 +23,8 @@
         </div>
         <div id="headerBanner">
         	<div class="banner frame_name active" onclick="changeIndexMenu(0);">主页</div>
-        	<div class="banner frame_name" onclick="changeIndexMenu(1);">影院</div>
-        	<div class="banner frame_name" onclick="changeIndexMenu(2);">活动</div>
-        	<div class="banner frame_name" onclick="changeIndexMenu(3);">我的</div>
+        	<div class="banner frame_name" onclick="changeIndexMenu(1);">活动</div>
+        	<div class="banner frame_name" onclick="changeIndexMenu(2);">联系我们</div>
         	<div class="banner_split bs1"> </div>
         	<div class="banner_split bs2"> </div>
         	<div class="banner_split bs3"> </div>
@@ -79,12 +78,6 @@
                     opaque: true,
                     bgColor: '#000'
                 },{
-                    name: 'cinema',
-                    url: './html/indexgroup/cinema.html',
-                    bounces: false,
-                    opaque: true,
-                    bgColor: '#000'
-                },{
                     name: 'movie',
                     url: './html/indexgroup/movie.html',
                     bounces: false,
@@ -103,7 +96,7 @@
             console.log(index+"  aaaa");
             var name = ret.name;
             // 两个frame，每个frame有两种图标，这里写得有点绕
-            if (index == 2) {
+            if (index == 1) {
                 if ($api.getStorage('movieStyle')) {
                     //console.log($api.getStorage('movieStyle')+"  测试bug");
                     changeIndexStyleBtn($api.getStorage('movieStyle'));
@@ -114,17 +107,6 @@
                 } else{
                     // $api.setStorage('movieStyle','show');
                     changeIndexStyleBtn('show');
-                }
-            } else if(index == 1){
-                if ($api.getStorage('cinemaStyle')) {
-                    changeIndexStyleBtn($api.getStorage('cinemaStyle'));
-                    api.execScript({
-                        frameName: 'cinema',
-                        script: 'changeStyle("'+$api.getStorage('cinemaStyle')+'")'
-                    });
-                } else{
-                    // $api.setStorage('cinemaStyle','cinema_list');
-                    changeIndexStyleBtn('cinema_list');
                 }
             } else {
                 changeIndexStyleBtn();
@@ -146,76 +128,10 @@
             case 'list': chooseStyleBtn.className = 'show';
                         $api.attr(chooseStyleBtn,'onclick', 'showStyle("movie","show");');
                         break;
-            case 'cinema_map': chooseStyleBtn.className = 'cinema_list';
-                        $api.attr(chooseStyleBtn,'onclick', 'showStyle("cinema","cinema_list");');
-                        break;
-            case 'cinema_list': chooseStyleBtn.className = 'cinema_map';
-                        $api.attr(chooseStyleBtn,'onclick', 'showStyle("cinema","cinema_map");');
-                        break;
             default: chooseStyleBtn.className = '';
                     $api.removeAttr(chooseStyleBtn,'onclick');
         }
 
-    };
-
-    // 按条件搜索
-    var searchInMap = function(options){
-        map.searchNearBy({
-            key: '电影院',
-            lon: 116.384767,
-            lat: 39.989539,
-            radius: 2000,
-            pageIndex: 0
-        },function(ret,err){
-            if (ret.status) {
-                // api.alert({title:'NearBy搜索结果总条数',msg:ret.totalNum});
-            }else {
-                // api.alert({title:'搜索错误代码',msg:err.msg});
-            }
-        });
-    };
-    var openBaiduMap = function(options){
-        // 高度不知为何有一点误差
-        if ($api.getStorage('map') && $api.getStorage('map') == 2) {
-
-        } else{
-            map.open({
-                x: 0,
-                y: 0,
-                width: wW,
-                height: wH-headerPos.h-headerBannerPos.h-footerPos.h-2,
-                lon: 116.384767,
-                lat: 39.989539,
-                fixedOn: 'cinema'
-            },function(ret,err){
-                $api.setStorage('map','2');
-                if(ret.status){
-                    searchInMap();
-                    map.setZoomLevel({
-                        level: 18
-                    });
-
-                } else {
-                }
-                if (err) {
-                }
-            });
-        }
-
-    };
-    var closeBaiduMap = function(options){
-        if (map) {
-            map.close();
-            $api.setStorage('map','1');
-        }
-    };
-    // 地图标示物的图片
-    var setMapRes = function(){
-        // bg_map_movie.9.png map信息的下箭头文本框
-        // arrow_right_white.png 同上
-        // ico_map_movie.png 最近的影院
-        // ico_map_price.9.png 所有影院信息，中间加上价格
-        // 我的位置是个蓝点
     };
 
 
@@ -224,7 +140,6 @@
 		console.log("api log test");
 		console.warn("api warning test");
 
-        window.map = api.require('baiduMap');
 		var chooseCityBtn = $api.byId('chooseCityBtn');
 	    var header = $api.dom('#header');
         $api.fixStatusBar( header );
