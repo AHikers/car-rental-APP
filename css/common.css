@@ -21,14 +21,14 @@ html,body{height: 100%}
 }
 
 #main{
-    -webkit-box-flex: 1; 
+    -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
     padding: 1em;
 }
 #footer{
     height: 44px; line-height: 44px;
-    background-color: #3C3C3C; 
+    background-color: #3C3C3C;
     width: 100%;
     text-align: center;
 }
@@ -41,7 +41,7 @@ html,body{height: 100%}
 /* main页面样式  */
 #headerBanner{
 	background: url(../res/drawable-xhdpi/bg_nav_sub_on.9.png) left top repeat-x;
-	text-align: center; background-color: #3C3C3C; 
+	text-align: center; background-color: #3C3C3C;
 	background-size: 4px 48px;
     width: 100%;
     height: 48px;
@@ -70,14 +70,12 @@ html,body{height: 100%}
 	top: 10px;
 }
 #headerBanner .banner_split.bs1{
-	left: 25%;
+	left: 33.33%;
 }
 #headerBanner .banner_split.bs2{
-	left: 50%;
+	left: 66.66%;
 }
-#headerBanner .banner_split.bs3{
-	left: 75%;
-}
+
 	/*选择城市按钮*/
 #chooseCityBtn{
 	position:absolute;
@@ -101,7 +99,7 @@ html,body{height: 100%}
 	float: left;
 	margin-left: 22px;
 	margin-top: 7px;
-	
+
 }
 #chooseCityBtn .chooseCitySpan{
 	color: #D4A82A;
@@ -152,13 +150,13 @@ html,body{height: 100%}
     display: block;
     border: none;
     outline: none;
-    height: 100%;   
+    height: 100%;
 }*/
 /*#chooseStyleBtn:active .chooseStyleImg{
     display: block;
     border: none;
     outline: none;
-    height: 100%;   
+    height: 100%;
 }*/
 /* main页面end */
 /* 城市列表  */
@@ -180,7 +178,7 @@ html,body{height: 100%}
 	float: left;
 	margin-left: 22px;
 	margin-top: 7px;
-	
+
 }
 #chooseCityBackBtn .chooseCityBackSpan{
 	color: #D4A82A;
@@ -244,5 +242,3 @@ html,body{height: 100%}
 .cus_act_li:active{
     background-color: #2D2D2D !important;
 }
-
-
