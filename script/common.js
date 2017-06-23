@@ -91,6 +91,14 @@ var showStyle = function(name,style){
 };
 
 
+//电话按钮
+var phone = function() {
+    api.call({
+        type: 'tel_prompt',
+        number: '400-710-3687'
+    });
+}；
+
 //某个影片的详情页
 var goDetail = function(json){
     var options = json || {type: '-1'};
@@ -144,27 +152,4 @@ var goActDetail = function(json){
     });
     // api.alert({msg:'未完成'});
 
-};
-
-// 打开index页的百度地图
-var openIndexMap = function(options){
-    // api.alert({msg:'1'});
-    api.execScript({
-        name: 'root',
-        script: 'openBaiduMap();'
-    });
-};
-// 关闭index页的百度地图
-var closeIndexMap = function(){
-    api.execScript({
-        name: 'root',
-        script: 'closeBaiduMap();'
-    });
-};
-// 在index的百度地图中按条件搜索 
-var searchIndexMap = function(options){
-    api.execScript({
-        name: 'root',
-        script: 'searchInMap();'
-    });
 };

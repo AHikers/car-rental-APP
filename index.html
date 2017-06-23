@@ -127,8 +127,8 @@
             case 'list': chooseStyleBtn.className = 'show';
                         $api.attr(chooseStyleBtn,'onclick', 'showStyle("movie","show");');
                         break;
-            default: chooseStyleBtn.className = '';
-                    $api.removeAttr(chooseStyleBtn,'onclick');
+            default: chooseStyleBtn.className = 'call';
+                    $api.attr(chooseStyleBtn,'onclick', 'phone();');
         }
 
     };

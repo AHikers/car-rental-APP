@@ -114,6 +114,10 @@ html,body{height: 100%}
     height: 48px;
     width: 48px;
 }
+#chooseStyleBtn.call{
+    background:#222222 url(../res/drawable-xhdpi/home_icon_phone@2x.png);
+    background-size: 100% 100%;
+}
 #chooseStyleBtn.list{
     background:#222222 url(../res/drawable-xhdpi/ico_list.png);
     background-size: 100% 100%;
@@ -128,7 +132,7 @@ html,body{height: 100%}
 }
 #chooseStyleBtn.show:active{
     background:#222222 url(../res/drawable-xhdpi/ico_show_orange.png);
-    background-size: 100% 100%;ico_cinema_map
+    background-size: 100% 100%;
 }
 #chooseStyleBtn.cinema_map{
     background:#222222 url(../res/drawable-xhdpi/ico_cinema_map.png);
