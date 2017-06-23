@@ -35,7 +35,7 @@
             line-height: 48px;
             padding: 0 1em;
         }
-        #headerBanner .banner{
+       /* #headerBanner .banner{
             width: 33%;
         }
         #headerBanner .longer{
@@ -46,7 +46,7 @@
         }
         #headerBanner .banner_split.bs2{
             left: 67%;
-        }
+        }*/
     </style>
 </head>
 <body ontouchstart="">
@@ -57,13 +57,13 @@
                 <span class="chooseCityBackSpan">玛莎拉蒂</span>
             </a>
         </div>
-        <div id="headerBanner">
+        <!-- <div id="headerBanner">
             <div class="banner frame_name active" onclick="changeActMenu(0);">全部</div>
             <div class="banner frame_name longer" onclick="changeActMenu(1);">热门</div>
             <div class="banner frame_name" onclick="changeActMenu(2);">限时优惠</div>
             <div class="banner_split bs1"> </div>
             <div class="banner_split bs2"> </div>
-        </div>
+        </div> -->
         <div id="main">
                 
         </div>
@@ -79,27 +79,27 @@
 
     apiready = function(){
         
-        var chooseCityBtn = $api.byId('chooseCityBtn');
+        //var chooseCityBtn = $api.byId('chooseCityBtn');
         var header = $api.byId('header');
         $api.fixStatusBar(header); 
 
-        var headerBanner = $api.byId('headerBanner');
+        //var headerBanner = $api.byId('headerBanner');
         var footer = $api.byId('footer');
         window.headerPos = $api.offset(header);
-        window.headerBannerPos = $api.offset(headerBanner);
+        //window.headerBannerPos = $api.offset(headerBanner);
         var footerPos = $api.offset(footer);
         var main = $api.byId('main');
         var mainPos = $api.offset(main);
 
-        window.wW = api.winWidth;
+        /*window.wW = api.winWidth;
         window.wH = api.winHeight;
         var w = parseInt(wW/3);
         var h = parseInt(wH*4/5);
-        var banner_bar = $api.byId('banner_bar');
-        var aFrameName = $api.domAll('#headerBanner .frame_name');
-        var chooseStyleBtn = $api.byId('chooseStyleBtn');
+        var banner_bar = $api.byId('banner_bar');*/
+        //var aFrameName = $api.domAll('#headerBanner .frame_name');
+        ///var chooseStyleBtn = $api.byId('chooseStyleBtn');
         // 上方的导航，原版效果没有实现
-        function changeBanner(num){
+       /* function changeBanner(num){
             for(var i = 0,len = aFrameName.length;i < len; i++ ){
                 $api.removeCls(aFrameName[i],'active');
             }
@@ -151,7 +151,7 @@
             });
             
         };
-        openFrameGroup();
+        openFrameGroup();*/
         
     };
 </script>

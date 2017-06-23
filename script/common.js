@@ -53,7 +53,7 @@ var openActGroup = function(num){
     $api.setStorage('actgroup',num);
     api.openWin({
         name: 'act_win',
-        url: '../actgroup/actgroup_win.html',
+        url: '../actgroup/ticket.html',
         bounces: false,
         rect: {
             x: 0,
