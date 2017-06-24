@@ -83,7 +83,7 @@ html,body{height: 100%}
 	top: bottom;
 	width: 143px;
 	height: 48px;
-	background:#222222 url(../res/drawable-xhdpi/citychoose_nor.9.png) center center no-repeat;
+	background-color:#222222;
 	background-size: 100% 100%;
 }
 #chooseCityBtn:active{
@@ -115,7 +115,7 @@ html,body{height: 100%}
     width: 48px;
 }
 #chooseStyleBtn.call{
-    background:#222222 url(../res/drawable-xhdpi/home_icon_phone@2x.png);
+    background:#222222 url(../res/drawable-xhdpi/callMe.png) no-repeat;
     background-size: 100% 100%;
 }
 #chooseStyleBtn.list{

@@ -20,7 +20,7 @@
             position: absolute;
             -webkit-filter: blur(6px);
             filter: blur(6px);
-            opacity: 0.3;
+            opacity: 1;
         }
         #movieDetailBackBtn{
             position: absolute;
@@ -43,7 +43,7 @@
             float: left;
             margin-left: 22px;
             margin-top: 7px;
-            
+
         }
         #movieDetailBackBtn .chooseCityBackSpan{
             color: #D4A82A;
@@ -73,12 +73,12 @@
         }
         #main .box_top .box_top_box{
             position: relative;
-            float: left;
-            width: 30%;
+            width: 70%;
             height: 100%;
+            margin: 0 auto;;
         }
         #main .box_top .box_top_center{
-            width: 40%;
+            width: 70%;
         }
         #main .box_top_box span{
             color: #FFF;
@@ -129,11 +129,11 @@
         #box_middle_shadow{
             height: 64px;
         }
-        
+
         #main .box_middle span{
             color: #B1B1B1;
         }
-        #main .box_middle .middle_p{ 
+        #main .box_middle .middle_p{
             overflow: hidden;
             margin: 2px 1em;
             color: #B1B1B1;
@@ -146,7 +146,7 @@
             color: #B1B1B1;
         }
         #main .box_middle .middle_p.detail{
-            text-indent: 2em; 
+            text-indent: 2em;
         }
         #main .box_middle .middle_p:after{
             clear: both;
@@ -202,21 +202,15 @@
     <div id="wrap">
         <div id="header">
             <a id="movieDetailBackBtn" tapmode onclick="api.closeWin();">
-                <img src="../../res/drawable-hdpi/ic_launcher.png" class="chooseCityImg">
+                <img src="../../res/drawable-hdpi/conLogo.jpg" class="chooseCityImg">
                 <span class="chooseCityBackSpan">法拉利：极速跑车</span>
             </a>
         </div>
         <div id="main">
             <div class="box_top">
-                <div class="box_top_left box_top_box">
-                    <span class="span_left left">资料</span>
-                </div>
                 <div class="box_top_center box_top_box">
                     <span class="span_center center">简介</span>
-                    <img src="../../image/1.jpg" alt="" id="poster">
-                </div>
-                <div class="box_top_right box_top_box">
-                    <span class="span_right right">评论</span>
+                    <img src="../../image/3.jpg" alt="" id="poster">
                 </div>
                 <div id="box_top_shadow"></div>
             </div>
@@ -224,21 +218,23 @@
                 <div id="box_middle_shadow"></div>
                 <!-- <div id="box_bottom_shadow"></div> -->
             </div>
-            <div class="box_bottom">
+            <div class="box_bottom" onclick="phone();">
                 <!-- input在ios里面会没法写样式 -->
                 <!-- <input type="button" value="排期购票" tapmode> -->
-                <a class="button" tapmode>排期购票</a>
+                <a class="button" tapmode>联系我们</a>
             </div>
-            <img src="../../image/1.jpg" alt="" id="main_shadow">
+            <img src="../../image/3.jpg" alt="" id="main_shadow">
         </div>
 
 
     </div>
 </body>
+<script type="text/javascript" src="../../script/common.js"></script>  
 <script type="text/javascript" src="../../script/api.js"></script>
 <script type="text/javascript">
 
-    apiready = function(){       
+
+    apiready = function(){
         var header = $api.byId('header');
         	$api.fixStatusBar( header );
         var boxMiddle = $api.dom('.box_middle');

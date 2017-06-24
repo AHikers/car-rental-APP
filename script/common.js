@@ -53,7 +53,7 @@ var openActGroup = function(num){
     $api.setStorage('actgroup',num);
     api.openWin({
         name: 'act_win',
-        url: '../actgroup/ticket.html',
+        url: '../actgroup/actgroup_win.html',
         bounces: false,
         rect: {
             x: 0,
@@ -97,7 +97,7 @@ var phone = function() {
         type: 'tel_prompt',
         number: '400-710-3687'
     });
-}；
+};
 
 //某个影片的详情页
 var goDetail = function(json){

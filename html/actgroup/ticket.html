@@ -14,39 +14,10 @@
             background-color: #2B2B2B;
             padding: 1em;
         }
-        /*头部样式*/
-        #backBtn{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: auto;
-            height: 48px;
-            background: url(../../res/drawable-xhdpi/arrow_left_yellow.png) 8px center no-repeat;
-            background-size: 7px 14px;
-        }
-        #backBtn:active{
-            background-color: #191919;
-        }
-        #backBtn .chooseCityImg{
-            display: inline-block;
-            border: none;
-            outline: none;
-            width: 32px;
-            height: 32px;
-            float: left;
-            margin-left: 22px;
-            margin-top: 7px;
-            
-        }
-        #backBtn .chooseCityBackSpan{
-            color: #D4A82A;
-            line-height: 48px;
-            padding: 0 1em;
-        }
         /*活动详情按钮*/
         #act_detail_box{
             width: 100%;
-            margin-top: 10px;
+            margin-top: 0px;
         }
         #act_detail_box .act_detail_btn{
             width: 100%;
@@ -71,7 +42,7 @@
         }
         #act_detail_box .ing{
             background-color: #ff4646;
-            
+
         }
         #act_detail_box .end{
             background-color: #617488;
@@ -92,12 +63,6 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
-            <a id="backBtn" onclick="api.closeWin();" tapmode>
-                <img src="../../res/drawable-hdpi/ic_launcher.png" class="chooseCityImg">
-                <span class="chooseCityBackSpan">玛莎拉蒂</span>
-            </a>
-        </div>
         <div id="main">
             <!-- 活动详情按钮 -->
             <div id="act_detail_box">
@@ -112,22 +77,22 @@
                     <span class="title">一周跑车推荐《保时捷》</span>
                 </div>
                 <div class="act_detail_btn">
-                    <span class="statu ing"></span>
+
                     <img src="../../image/3.jpg" alt="111">
                     <span class="title">一周跑车推荐《保时捷》</span>
                 </div>
                 <div class="act_detail_btn">
-                    <span class="statu end"></span>
+
                     <img src="../../image/3.jpg" alt="111">
                     <span class="title">一周跑车推荐《保时捷》</span>
                 </div>
                 <div class="act_detail_btn">
-                    <span class="statu ing"></span>
+
                     <img src="../../image/3.jpg" alt="111">
                     <span class="title">一周跑车推荐《保时捷》</span>
                 </div>
                 <div class="act_detail_btn">
-                    <span class="statu end"></span>
+
                     <img src="../../image/3.jpg" alt="111">
                     <span class="title">一周跑车推荐《保时捷》</span>
                 </div>
@@ -141,24 +106,17 @@
 <script type="text/javascript" src="../../script/swipe.js"></script>
 <script>
     apiready = function(){
-        var header = $api.byId('header');
-        $api.fixStatusBar(header); 
-        var footer = $api.byId('footer');
-        window.headerPos = $api.offset(header);
-        var footerPos = $api.offset(footer);
-        var main = $api.byId('main');
-        var mainPos = $api.offset(main);
-
         Zepto(function($){
             var aLi = $('#title-box-ul li');
             var act_title = $('#title-box-text');
 
             $('.act_detail_btn').on('click', function(event) {
-                goActDetail();
+                //goActDetail();
+                goDetail({});
                 event.preventDefault();
             });
         });
-        
+
 
     };
 

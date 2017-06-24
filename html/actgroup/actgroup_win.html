@@ -28,7 +28,7 @@
             float: left;
             margin-left: 22px;
             margin-top: 7px;
-            
+
         }
         #backBtn .chooseCityBackSpan{
             color: #D4A82A;
@@ -53,7 +53,7 @@
     <div id="wrap">
         <div id="header">
             <a id="backBtn" onclick="api.closeWin();" tapmode>
-                <img src="../../res/drawable-hdpi/ic_launcher.png" class="chooseCityImg">
+                <img src="../../res/drawable-hdpi/conLogo.jpg" class="chooseCityImg">
                 <span class="chooseCityBackSpan">玛莎拉蒂</span>
             </a>
         </div>
@@ -65,7 +65,7 @@
             <div class="banner_split bs2"> </div>
         </div> -->
         <div id="main">
-                
+
         </div>
         <div id="footer">
             <h5>Copyright &copy;2014 </h5>
@@ -78,28 +78,28 @@
 <script type="text/javascript">
 
     apiready = function(){
-        
-        //var chooseCityBtn = $api.byId('chooseCityBtn');
-        var header = $api.byId('header');
-        $api.fixStatusBar(header); 
 
-        //var headerBanner = $api.byId('headerBanner');
+        var chooseCityBtn = $api.byId('chooseCityBtn');
+        var header = $api.byId('header');
+        $api.fixStatusBar(header);
+
+        var headerBanner = $api.byId('headerBanner');
         var footer = $api.byId('footer');
         window.headerPos = $api.offset(header);
-        //window.headerBannerPos = $api.offset(headerBanner);
+        window.headerBannerPos = $api.offset(headerBanner);
         var footerPos = $api.offset(footer);
         var main = $api.byId('main');
         var mainPos = $api.offset(main);
 
-        /*window.wW = api.winWidth;
+        window.wW = api.winWidth;
         window.wH = api.winHeight;
         var w = parseInt(wW/3);
         var h = parseInt(wH*4/5);
-        var banner_bar = $api.byId('banner_bar');*/
-        //var aFrameName = $api.domAll('#headerBanner .frame_name');
-        ///var chooseStyleBtn = $api.byId('chooseStyleBtn');
+        var banner_bar = $api.byId('banner_bar');
+        var aFrameName = $api.domAll('#headerBanner .frame_name');
+        var chooseStyleBtn = $api.byId('chooseStyleBtn');
         // 上方的导航，原版效果没有实现
-       /* function changeBanner(num){
+       function changeBanner(num){
             for(var i = 0,len = aFrameName.length;i < len; i++ ){
                 $api.removeCls(aFrameName[i],'active');
             }
@@ -118,9 +118,9 @@
                 index: showNum,
                 rect: {
                     x: 0,
-                    y: headerPos.h+headerBannerPos.h,
+                    y: headerPos.h,
                     w: 'auto',
-                    h: wH-headerPos.h-headerBannerPos.h
+                    h: wH-headerPos.h
                 },
                 scrollEnabled: true,
                 frames: [
@@ -130,7 +130,7 @@
                         bounces: false,
                         opaque: true,
                         bgColor: '#000'
-                    },{
+                    }/*,{
                         name: 'view',
                         url: './view.html',
                         bounces: false,
@@ -142,17 +142,17 @@
                         bounces: false,
                         opaque: true,
                         bgColor: '#000'
-                    }
+                    }*/
                 ]
             },function(ret,err){
                 var index = ret.index;
                 var name = ret.name;
-                changeBanner(index);               
+                changeBanner(index);
             });
-            
+
         };
-        openFrameGroup();*/
-        
+        openFrameGroup();
+
     };
 </script>
 </html>
