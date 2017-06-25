@@ -86,10 +86,10 @@ html,body{height: 100%}
 	background-color:#222222;
 	background-size: 100% 100%;
 }
-#chooseCityBtn:active{
+/*#chooseCityBtn:active{
 	background:#222222 url(../res/drawable-xhdpi/citychoose_press.9.png) center center no-repeat;
 	background-size: 100% 100%;
-}
+}*/
 #chooseCityBtn .chooseCityImg{
 	display: inline-block;
 	border: none;
@@ -241,8 +241,4 @@ html,body{height: 100%}
 }
 .pull-right{
     float: right;
-}
-
-.cus_act_li:active{
-    background-color: #2D2D2D !important;
 }

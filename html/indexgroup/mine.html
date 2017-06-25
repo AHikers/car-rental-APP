@@ -93,6 +93,7 @@
             background-color: #373737;
             margin-bottom: 5px;
             text-indent: 15px;
+            overflow: hidden;
         }
         .etc .count{
             color: #EFB501;
@@ -105,44 +106,51 @@
     <div id="wrap">
         <div id="main">
             <!-- 用户信息按钮 -->
-            <div id="user_name" class="logout" onclick="openLogin();" tapmode>
-                <!-- <img src="../../res/drawable-xhdpi/icon233.png" alt="" class="user_icon">
+            <!--<div id="user_name" class="logout" onclick="openLogin();" tapmode>
+                <img src="../../res/drawable-xhdpi/icon233.png" alt="" class="user_icon">
                 <span class="nickname">
                     QQ电影票
-                </span> -->
+                </span>
                 登录
             </div>
-            <!-- 用户信息按钮end -->
-            <!-- 我的订单 -->
+
             <div id="my_list">
                 <div class="my_list_inner list" onclick="openLogin();">
                     <a>
                         待付款
-                        <!-- <span class="count">(0)</span> -->
+                         <span class="count">(0)</span>
                     </a>
                 </div>
                 <div class="my_list_inner ticket" onclick="openLogin();">
                     <a>
                         我的电影票
-                        <!-- <span class="count">(0)</span> -->
+                        <span class="count">(0)</span>
                     </a>
                 </div>
-            </div>
+            </div>-->
             <!-- 我的订单end -->
             <!-- 其它 -->
             <div class="etc">
                 <label class="title">公司信息</label>
-                <a class="coupon cus_act_li " onclick="openLogin();" tapmode>
-                    公司地址：深圳啥啥啥租车有限公司
+                <div class="coupon ">
+                    公司名称：泰鼎盛汽车综合服务有限公司
                     <!-- <span class="count">(0)</span> -->
-                </a>
-                <a class="coupon cus_act_li " onclick="openLogin();" tapmode>
+                </div>
+                <div class="coupon">
+                    公司地址：深圳市什么区什么路多少号
+                    <!-- <span class="count">(0)</span> -->
+                </div>
+                <div class="coupon">
                     租车热线：18817877866
                     <!-- <span class="count">(0)</span> -->
-                </a>
-                <a class="options cus_act_li " tapmode onclick="openOptions();">
+                </div>
+                <!--<div class="coupon " onclick="openLogin();" tapmode>
+                    租车热线：18817877866
+                    <span class="count">(0)</span>
+                </div> -->
+                <div class="options">
                     联系人：张先生
-                </a>
+                </div>
             </div>
             <!-- 其它end -->
         </div>
@@ -152,7 +160,7 @@
 <script type="text/javascript" src="../../script/common.js"></script>
 <script type="text/javascript" src="../../script/zepto.js"></script>
 <script type="text/javascript">
-var openOptions = function(){
+/*var openOptions = function(){
     api.openWin({
         name: 'config_detail',
         url: '../details/config_detail.html',
@@ -177,7 +185,7 @@ var openLogin = function(){
             h: 'auto'
         }
     });
-};
+};*/
 apiready = function(){
     Zepto(function($){
 
